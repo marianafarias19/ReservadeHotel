@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reserva de Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="reservation-container">
+        <h1>Reserva de Hotel</h1>
+        <form id="reservation-form">
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+
+            <label for="check-in">Data de Check-in:</label>
+            <input type="date" id="check-in" name="check-in" required>
+
+            <label for="check-out">Data de Check-out:</label>
+            <input type="date" id="check-out" name="check-out" required>
+
+            <label for="room-type">Tipo de Quarto:</label>
+            <select id="room-type" name="room-type" required>
+                <option value="">Selecione</option>
+                <option value="individual">Individual</option>
+                <option value="duplo">Duplo</option>
+                <option value="suite">Suíte</option>
+            </select>
+
+            <button type="submit">Reservar</button>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            <h2>Confirmação de Reserva</h2>
+            <p id="confirmation-details"></p>
+            <button id="new-reservation" onclick="resetForm()">Nova Reserva</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
